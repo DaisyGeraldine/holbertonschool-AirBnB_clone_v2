@@ -4,14 +4,14 @@ from flask import Flask
 
 # new object.
 app = Flask(__name__)
-app.url_map.strict_slashes = False
 
 
 # decorator
-@app.route("/")
+@app.route("/", strict_slashes=False)
 def hello_hbnb():
+    """ This method display message"""
     return "Hello HBNB"
 
 
-if(__name__ == '__main___'):
-    app.run(host="0.0.0.0", port=5000, debug=True)
+if __name__ == '__main___':
+    app.run(host="0.0.0.0", port=5000)
