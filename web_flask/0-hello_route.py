@@ -2,7 +2,7 @@
 """ Script that starts a Flask web application """
 from flask import Flask
 
-# new object
+# new object.
 app = Flask(__name__)
 
 # decorator
