@@ -4,10 +4,10 @@ from flask import Flask
 
 # new object.
 app = Flask(__name__)
-
+app.url_map.strict_slashes = False
 
 # decorator
-@app.route("/", strict_slashes=False)
+@app.route("/")
 def hello_hbnb():
     """ This method display message"""
     return "Hello HBNB"
