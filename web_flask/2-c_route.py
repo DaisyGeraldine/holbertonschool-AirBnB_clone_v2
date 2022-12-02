@@ -19,7 +19,7 @@ def hbnb():
 
 @app.route('/c/<text>')
 def c_isfun(text=None):
-    """ display a message HBNB """
+    """ display a message with a text (parameter)"""
     new_text = text.replace('_', ' ')
     return f'C {new_text}'
 
