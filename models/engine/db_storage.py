@@ -72,6 +72,10 @@ class DBStorage:
             session = self.__session()
             session.query(type(obj)).filter(type(obj).id == obj.id).delete()
 
+    def close(self):
+        """ This method call reload method"""
+        self.__session.remove()
+
     def reload(self):
         Base.metadata.create_all(self.__engine)
 
