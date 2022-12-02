@@ -20,7 +20,8 @@ def hbnb():
 @app.route('/c/<text>')
 def c_isfun(text):
     """ display “C ” followed by the value of the <text> variable """
-    return 'C {}'.format(text.replace('_', ' '))
+    new_text = text.replace('_', ' ')
+    return f'C {new_text}'
 
 
 if __name__ == '__main__':
