@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Script that starts a Flask web application """
+
 from flask import Flask
 app = Flask(__name__)
 app.url_map.strict_slashes = False
@@ -20,7 +21,7 @@ def hbnb():
 @app.route('/c/<text>')
 def c_isfun(text=None):
     """ display a message HBNB """
-    new_text = text.replace('_',' ')
+    new_text = text.replace('_', ' ')
     return f'C {new_text}'
 
 
