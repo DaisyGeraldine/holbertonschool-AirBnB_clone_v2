@@ -17,8 +17,10 @@ def hbnb():
     """ display a message HBNB """
     return 'HBNB'
 
+
 @app.route('/c/<text>')
 def c_isfun(text=None):
+    """ display a message HBNB """
     return f'C {text}'
 
 
