@@ -22,5 +22,5 @@ else:
         def cities(self):
             from models import storage
             objs = [x for x in storage.all().values()
-                    if x.__class__ == "City" and x.state_id == self.id]
+                    if x.__class__.__name__ == "City" and x.state_id == self.id]
             return objs
