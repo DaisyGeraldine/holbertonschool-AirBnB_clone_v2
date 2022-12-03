@@ -9,7 +9,7 @@ app.url_map.strict_slashes = False
 
 
 @app.teardown_appcontext
-def remove_close():
+def remove_close(self):
     """ tear down database """
     storage.close()
 
@@ -18,7 +18,7 @@ def remove_close():
 def states_list():
     """ display a HTML page: list of all State objects present in DBStorage """
     dict_states = storage.all(State)
-    return render_template('7-states_list.py', states=dict_states)
+    return render_template('7-states_list.html', states=dict_states)
 
 
 if __name__ == '__main__':
